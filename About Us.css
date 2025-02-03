@@ -56,8 +56,52 @@ header {
     
 }
 
-h1 {
-    background: linear-gradient(to left, red, blue)
+/* Mobile Navigation */
+@media (max-width: 768px) {
+    header {
+        padding: 20px 30px;
+    }
+
+    .navigation {
+        display: none; /* Hide the regular navigation on small screens */
+        flex-direction: column;
+        background-color: #333;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .navigation.active {
+        display: flex; /* Show the navigation when active */
+    }
+
+    .navigation a {
+        font-size: 1.2em;
+        color: lightblue;
+        padding: 15px;
+        text-decoration: none;
+        border-top: 1px solid #fff;
+    }
+
+    .navigation a:hover {
+        background-color: #444;
+    }
+
+    .menu-toggle {
+        display: block;
+        cursor: pointer;
+    }
+
+    .menu-toggle span {
+        display: block;
+        width: 30px;
+        height: 4px;
+        background-color: white;
+        margin: 6px 0;
+    }
+
 }
 
 footer {
