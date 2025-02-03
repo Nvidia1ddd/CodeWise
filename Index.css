@@ -28,7 +28,7 @@ header {
 }
 
 .navigation a {
-    position: relative;
+    position: absolute;
     font-size: 1.1em;
     color: lightblue;
     text-decoration: none;
