@@ -14,7 +14,14 @@
         <div class="logo">
             <a href="index.html"><img src="Logo.jpg" width="140" height="50" alt="CODEWISE" title="CODEWISE"></a>
         </div>
-    
+
+        <!-- Add a menu toggle (hamburger) button -->
+        <div class="menu-toggle" id="menuToggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        
         <nav class="navigation">
             <a href="index.html">Home</a>
             <a href="About Us.html">About Us</a>
@@ -34,6 +41,16 @@
         <p>Call Us: +27 71 209 2868</p>
         <p>Privacy Policy | Terms Of Service</p>
     </footer>
+
+    <script>
+        // JavaScript for toggling the navigation on small screens
+        const menuToggle = document.getElementById('menuToggle');
+        const navLinks = document.getElementById('navLinks');
+        
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+    </script>
 
 </body>
 </html>
