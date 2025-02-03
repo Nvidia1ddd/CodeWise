@@ -28,7 +28,7 @@ header {
 }
 
 .navigation a {
-    position: absolute;
+    position: fixed;
     font-size: 1.1em;
     color: lightblue;
     text-decoration: none;
@@ -38,7 +38,7 @@ header {
 
 .navigation a::after {
     content: '';
-    position: absolute;
+    position: fixed;
     left: 0;
     bottom: -6px;
     width: 100%;
