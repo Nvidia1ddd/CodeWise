@@ -1,3 +1,4 @@
+/* General Styles for Navigation */
 * {
     padding-left: 0%;
     padding-right: 0;
@@ -16,7 +17,6 @@ header {
     justify-content: space-between;
     align-items: center;
     z-index: 99;
-
 }
 
 .logo {
@@ -27,8 +27,13 @@ header {
     border-radius: 5px;
 }
 
+/* Desktop Navigation */
+.navigation {
+    display: flex;
+    justify-content: flex-end;
+}
+
 .navigation a {
-    position: inherit;
     font-size: 1.1em;
     color: lightblue;
     text-decoration: none;
@@ -53,53 +58,51 @@ header {
 .navigation a:hover::after {
     transform-origin: left;
     transform: scaleX(1);
-    
 }
 
-main {
-    padding: 1rem;
-    text-align: center;
-}
+/* Mobile Navigation */
+@media (max-width: 768px) {
+    header {
+        padding: 20px 30px;
+    }
 
-#hero h1 {
-    background: linear-gradient(to right, lightblue, rgb(253, 121, 121));
-    border-radius: 5px;
-}
+    .navigation {
+        display: none; /* Hide the regular navigation on small screens */
+        flex-direction: column;
+        background-color: #333;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+        text-align: center;
+    }
 
-#services h2 {
-    background: linear-gradient(to left, lightblue, rgb(134, 134, 219));
-    border-radius: 5px;
-}
+    .navigation.active {
+        display: flex; /* Show the navigation when active */
+    }
 
-#portfolio h2 {
-    background: linear-gradient(to right, lightblue, rgb(253, 121, 121));
-    border-radius: 5px;
-}
+    .navigation a {
+        font-size: 1.2em;
+        color: white;
+        padding: 15px;
+        text-decoration: none;
+        border-top: 1px solid #fff;
+    }
 
-#about h2 {
-    background: linear-gradient(to left, lightblue, rgb(134, 134, 219));
-    border-radius: 5px;
-}
+    .navigation a:hover {
+        background-color: #444;
+    }
 
-#contact h2 {
-    background: linear-gradient(to right, lightblue, rgb(253, 121, 121));
-    border-radius: 5px;
-}
+    .menu-toggle {
+        display: block;
+        cursor: pointer;
+    }
 
-/*h1 {
-    background: linear-gradient(to right, lightblue, rgb(253, 121, 121));
-    border-radius: 5px;
-}
-
-h2 {
-    background: linear-gradient(to left, lightblue, rgb(134, 134, 219));
-    border-radius: 5px;
-}*/
-
-footer {
-    background: linear-gradient(to left, blue, purple);
-    color: lightblue;
-    text-align: center;
-    border-radius: 5px;
-    padding: 1rem;
+    .menu-toggle span {
+        display: block;
+        width: 30px;
+        height: 4px;
+        background-color: white;
+        margin: 6px 0;
+    }
 }
