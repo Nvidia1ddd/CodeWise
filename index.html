@@ -15,11 +15,20 @@
             <a href="index.html"><img src="Logo.jpg" width="145" height="50" alt="CODEWISE" title="CODEWISE"></a>
         </div>
 
-        <nav class="navigation">
+        <!-- Add a menu toggle (hamburger) button -->
+        <div class="menu-toggle" id="menuToggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <!-- Navigation Links -->
+        <nav class="navigation" id="navLinks">
             <a href="index.html">Home</a>
             <a href="About Us.html">About Us</a>
             <a href="Our Services.html">Our Services</a>
             <a href="Contact Us.html">Contact Us</a>
+        </nav>
     
     </header>
 
@@ -61,5 +70,14 @@
     </footer>
    
     <script src="Index.js"></script>
+    <script>
+        // JavaScript for toggling the navigation on small screens
+        const menuToggle = document.getElementById('menuToggle');
+        const navLinks = document.getElementById('navLinks');
+        
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+    </script>
 </body>
 </html>
